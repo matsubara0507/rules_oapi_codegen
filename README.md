@@ -1,0 +1,1 @@
+# rules_oapi_codegen
