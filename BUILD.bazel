@@ -1,0 +1,4 @@
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# gazelle:prefix github.com/matsubara0507/rules_oapi_codegen
+gazelle(name = "gazelle")

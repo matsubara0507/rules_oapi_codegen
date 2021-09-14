@@ -1,0 +1,15 @@
+load("@bazel_gazelle//:def.bzl", "gazelle")
+load("@rules_oapi_codegen//oapi_codegen:def.bzl", "oapi_codegen")
+
+gazelle(name = "gazelle")
+
+oapi_codegen(
+    name = "api",
+    out = "api.gen.go",
+    generate = [
+        "types",
+        "server",
+    ],
+    package = "api",
+    spec = "petstore.yaml",
+)
